@@ -49,12 +49,8 @@
         ?>
         <li>
             <?php
-                $sum = 0;
-                for ($j = 0; $j < count($students[$i]["grades"]); $j++) {
-                    $sum += $students[$i]["grades"][$j];
-                }
                 echo "<strong>Nome e Cognome:</strong>" . " " . $students[$i]["name"] . " " . $students[$i]["surname"] . "<br>";
-                echo "<strong>Media voti:</strong>" . " " . $average = $sum / count($students[$i]["grades"]);
+                echo "<strong>Media voti:</strong>" . " " . $average = array_sum($students[$i]['grades'])/count($students[$i]['grades']);
             }
         ?>
         </li>
